@@ -29,6 +29,15 @@ header{
 
 .menuWrap{
     display: flex;
+    font-weight: bold;
+}
+
+.menuWrap:hover li a{
+    color:gray;
+}
+
+.menuWrap li:hover a{
+    color:black;
 }
 
 .iconMenu{
