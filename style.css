@@ -10,7 +10,6 @@
 .logo{
     width: 74px;
     height: 24.66px;
-    
 }
 
 header{
@@ -34,7 +33,6 @@ header{
 
 .iconMenu{
     display: flex;
-    
 }
 
 .menuItem{
@@ -42,17 +40,80 @@ header{
 }
 
 .iconItem{
-    margin: 14px 14px;
+    
     padding: 8px 8px;
      
     border-radius: 100px;
 }
 
-.iconItem:hover{
-    background-color: #eee;
-}
 
 a{
     text-decoration: none;
     color: black;
+}
+
+
+.iconItem button{
+    border:hidden;
+    border-radius: 100px;
+    background-color: #ffffff11;
+    padding: 8px 8px;
+}
+
+i{
+    font-size: 16px;
+}
+
+main{
+    margin: 78px 150px 0 150px;
+}
+
+.iconItem button:hover
+{
+    background-color: #eee;
+}
+
+.day{
+    width: 70px;
+    vertical-align: top;
+    margin-top: -15px;
+
+}
+.mainTitle{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.newsEntertain{
+    margin-top: 80px;
+    box-sizing: border-box;
+    width: 625px;
+    height: 640px;
+    
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px gray;
+    overflow: hidden;
+}
+
+.news{
+    width: 36px;
+    vertical-align: top;
+    margin-top:-10px;
+}
+
+.newsEntertainHeader{
+    padding: 25px 24px 0;
+    height: 150px;
+    
+}
+
+.entertainTitle{
+    font-size: 30px;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    width: 90%;
+}
+.newstag{
+    font-size: 13px;
+    color: gray;
 }
