@@ -1,0 +1,58 @@
+.blind{
+    position:absolute;
+    clip: rect(0,0,0,0);
+    width:1px;
+    height: 1px;
+    margin:-1px;
+    overflow: hidden;
+}
+
+.logo{
+    width: 74px;
+    height: 24.66px;
+    
+}
+
+header{
+    width: 100%;
+    height: 72px;
+}
+
+
+.navigationBar{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    margin: 0 150px;
+}
+
+.menuWrap{
+    display: flex;
+}
+
+.iconMenu{
+    display: flex;
+    
+}
+
+.menuItem{
+    margin-right: 50px;
+}
+
+.iconItem{
+    margin: 14px 14px;
+    padding: 8px 8px;
+     
+    border-radius: 100px;
+}
+
+.iconItem:hover{
+    background-color: #eee;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
