@@ -1,0 +1,128 @@
+.txt-hide{
+    position: absolute;
+    clip: (0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+body{
+    background-color: #eff0f2;
+}
+
+/* 상단 */
+header{
+    border-bottom:1px solid #dcdde0;
+    background-color: #fff;
+    margin-bottom: 35px;
+}
+
+.header-wrap{
+    width: 980px;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    margin: 23px 0 24px 0;
+}
+
+
+/* 컨텐츠 */
+main{
+    width: 980px;
+    margin: 0 auto;
+}
+
+.silder-box{
+    width: 980px;
+    height: 412px;
+    box-sizing: border-box;
+    border:1px solid #e6e6e6;
+    background-color: #fff;
+}
+
+.section-recruit ul{
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.section-recruit ul li{
+    width: 244px;
+    height: 137px;
+    box-sizing: border-box;
+    border:1px solid #e6e6e6;
+    background-color: #fff;
+}
+.section-recruit ul li:last-child{
+    width: 245px;
+}
+
+/* 문화 섹션 */
+
+.section-culture{
+    
+    box-sizing: border-box;
+    
+    border:1px solid #e6e6e6;
+    margin-bottom: 120px;
+}
+
+.culture-image{
+    
+    width: 980px;
+    height: 215px;
+    box-sizing: border-box;
+    border:1px solid #e6e6e6;
+    background-color: #fff;
+    margin-bottom: 49px;
+}
+
+.section-culture .list-culture_wrap{
+    
+    margin: 0 50px;
+    
+}
+
+
+.section-culture ul .list-policy_culture{
+    margin-top: 17px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap:15px;
+}
+
+.policy-culture{
+    margin-bottom: 41px;
+}
+
+.section-culture ul .list-policy_culture li{
+    width: 282px;
+    height: 160px;
+    box-sizing: border-box;
+    border:1px solid #e6e6e6;
+    background-color: #fff;
+}
+
+/* 푸터 */
+
+footer{
+    border-top: 1px solid #e6e6e6;
+}
+.footer-content{
+    width: 980px;
+    margin: 37px auto;
+}
+
+
