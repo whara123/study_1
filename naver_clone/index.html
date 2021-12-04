@@ -30,10 +30,27 @@
     <main>
         <section class="section-recruit">
             <h2 class="txt-hide">채용정보관련</h2>
-            <div class="silder-box">
-                <img src="people-g74a918f9c_1920.jpg" alt="" class="img-person">
-                <p class="txt-person">수 많은 사용자의 목소리에서<br><strong>내 일의 자부심과 무게를 느낍니다</strong></p>
-                <a href="" class="link-naver_work">네이버에서 일한다는 것 > </a>
+            <div class="slider-box">
+                <button type="button" class="btn-left"><i class="bi bi-chevron-left"></i></button>
+                <button type="button" class="btn-right"><i class="bi bi-chevron-right"></i></button>
+                <div class="slider">
+                    <div class="item-slide">
+                        <img src="people-g74a918f9c_1920.jpg" alt="" class="img-person">
+                        <p class="txt-person">수 많은 사용자의 목소리에서<br><strong>내 일의 자부심과 무게를 느낍니다</strong></p>
+                        <a href="" class="link-naver_work">네이바에서 일한다는 것 > </a>
+                    </div>
+                    <div class="item-slide">
+                        <img src="low-poly-grid-haikei.png" alt="" class="img-tec">
+                        <p class="txt-person">BE ON THE FAST TRACK<br>네이바 월간 영입 : 기술직군</p>
+                        <a href="" class="link-naver_work">지원하기 > </a>
+                    </div>
+                    <div class="item-slide">
+                        <img src="circle-scatter-haikei.png" alt="" class="img-service">
+                        <p class="txt-person">SHOW YOUR CONTENT<br>네이바 신입 공채 : 서비스&비즈니스 직군</p>
+                        <a href="" class="link-naver_work">지원하기 > </a>
+                    </div>
+                </div>
+                
             </div>
             <ul>
                 <li><a href="">개발</a></li>
@@ -48,7 +65,6 @@
             <div class="imgbox">
                 <img src="gyeongbok-palace-gc2d291620_1920.jpg" alt="" class="img-cultrue">
                 <em class="txt-culture">Culture Report</em>
-
             </div>
             <ul class="list-culture_wrap">
                 <li class="policy-culture">
@@ -152,5 +168,71 @@
             </div>
 
         </footer>
+
+        <script>
+            
+            let slider = document.querySelector(".slider");
+            let item = document.querySelector(".item-slide");
+            let itemw= item.offsetWidth;
+            let btnLeft = document.querySelector(".btn-left");
+            let btnRight = document.querySelector(".btn-right");
+            let indexCount=0;
+
+
+            // btnLeft.addEventListener('click',function(){
+            //     slider.style.transform += 'translateX('+itemw+'px)';
+            // });
+            
+                btnRight.addEventListener('click',function(){
+                        slider.style.transform += 'translateX('+-itemw+'px)';
+
+                    });
+
+            
+
+
+
+            
+
+
+            function moveSlider(){
+                slider.animate([
+
+                {transform: 'translateX(0px)'},
+                {transform: 'translateX(0px)'},
+                {transform: `translateX(-${itemw}px)`},
+                {transform: `translateX(-${itemw}px)`},
+                
+                ],{
+                    duration:1000,
+                    
+                });
+
+                
+            }
+
+
+            // let moveSlider = slider.animate([
+
+            //     {transform: 'translateX(0px)'},
+            //     {transform: 'translateX(0px)'},
+            //     {transform: `translateX(-${itemw}px)`},
+            //     {transform: `translateX(-${itemw}px)`},
+                
+            //     ],{
+            //         duration:1000,
+            //     });
+
+            // moveSlider.onfinish = function(){
+            //     let firstItem = slider.removeChild(slider.firstElementChild);
+
+            //     slider.appendChild(firstItem);
+
+            //     moveSlider.play();
+            // }
+            
+            
+
+        </script>
 </body>
 </html>
