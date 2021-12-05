@@ -72,7 +72,7 @@ main{
     overflow: hidden;
 }
 .slider{
-    transition: 1s;
+   
 }
 
 .btn-left, .btn-right{
@@ -103,12 +103,22 @@ main{
     
 }
 
+.item-slide:nth-child(1){
+    transform: translateX(0);
+}
 .item-slide:nth-child(2){
     transform: translateX(980px);
 }
 .item-slide:nth-child(3){
     transform: translateX(1960px);
 }
+.item-slide:nth-child(4){
+    transform: translateX(2940px);
+}
+.item-slide:nth-child(5){
+    transform: translateX(3920px);
+}
+
 
 .item-slide img{
     width:100%;

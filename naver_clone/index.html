@@ -35,6 +35,11 @@
                 <button type="button" class="btn-right"><i class="bi bi-chevron-right"></i></button>
                 <div class="slider">
                     <div class="item-slide">
+                        <img src="circle-scatter-haikei.png" alt="" class="img-service">
+                        <p class="txt-person">SHOW YOUR CONTENT<br>네이바 신입 공채 : 서비스&비즈니스 직군</p>
+                        <a href="" class="link-naver_work">지원하기 > </a>
+                    </div>
+                    <div class="item-slide">
                         <img src="people-g74a918f9c_1920.jpg" alt="" class="img-person">
                         <p class="txt-person">수 많은 사용자의 목소리에서<br><strong>내 일의 자부심과 무게를 느낍니다</strong></p>
                         <a href="" class="link-naver_work">네이바에서 일한다는 것 > </a>
@@ -49,6 +54,12 @@
                         <p class="txt-person">SHOW YOUR CONTENT<br>네이바 신입 공채 : 서비스&비즈니스 직군</p>
                         <a href="" class="link-naver_work">지원하기 > </a>
                     </div>
+                    <div class="item-slide">
+                        <img src="people-g74a918f9c_1920.jpg" alt="" class="img-person">
+                        <p class="txt-person">수 많은 사용자의 목소리에서<br><strong>내 일의 자부심과 무게를 느낍니다</strong></p>
+                        <a href="" class="link-naver_work">네이바에서 일한다는 것 > </a>
+                    </div>
+                    
                 </div>
                 
             </div>
@@ -172,44 +183,62 @@
         <script>
             
             let slider = document.querySelector(".slider");
-            let item = document.querySelector(".item-slide");
-            let itemw= item.offsetWidth;
+            let sliderContents = document.querySelectorAll(".item-slide");
+            
+            let sliderWidth= sliderContents[0].offsetWidth;
+            
+            
             let btnLeft = document.querySelector(".btn-left");
             let btnRight = document.querySelector(".btn-right");
-            let indexCount=0;
+            let slideSpeed = 1000;
+            const startNum=0;
 
+            //슬라이더 안의 자식요소 갯수
+            let sliderLength= slider.childElementCount;
 
-            // btnLeft.addEventListener('click',function(){
-            //     slider.style.transform += 'translateX('+itemw+'px)';
-            // });
-            
-                btnRight.addEventListener('click',function(){
-                        slider.style.transform += 'translateX('+-itemw+'px)';
+        
 
-                    });
+            slider.style.transform = "translate3d(-"+(sliderWidth*(startNum+1))+"px, 0px, 0px";
 
             
-
-
-
+            let curIndex =startNum;
+            let curSlide = sliderContents[curIndex];
             
 
+            btnRight.addEventListener('click',function(){
+                if(curIndex<=sliderLength-1){
+                    slider.style.transition = slideSpeed+"ms";
+                    slider.style.transform = "translate3d(-"+(sliderWidth *(curIndex+2))+"px, 0px, 0px)";
+                    console.log(slider.style.transform);
+                }
+                if(curIndex===sliderLength-3){
+                    setTimeout(function(){
+                        slider.style.transition ="0ms";
+                        slider.style.transform = "translate3d(-"+sliderWidth+"px,0px,0px)";
+                    },990);
+                    curIndex=-1;
+                }
+                ++curIndex;
+            });
 
-            function moveSlider(){
-                slider.animate([
-
-                {transform: 'translateX(0px)'},
-                {transform: 'translateX(0px)'},
-                {transform: `translateX(-${itemw}px)`},
-                {transform: `translateX(-${itemw}px)`},
-                
-                ],{
-                    duration:1000,
+            btnLeft.addEventListener('click',function(){
+                if(curIndex>=0){
                     
-                });
+                    slider.style.transition = slideSpeed+"ms";
+                    slider.style.transform = "translate3d(-"+(sliderWidth *(curIndex))+"px, 0px, 0px)";
+                    console.log(slider.style.transform);
+                }   
+                if(curIndex===0){
+                    setTimeout(function(){
+                        slider.style.transition ="0ms";
+                        slider.style.transform = "translate3d(-"+ sliderWidth*(sliderLength-2)+ "px,0px,0px)";
+                    },990);
+                    curIndex=sliderLength-2;
+                }
+                --curIndex;
+            });
+           
 
-                
-            }
 
 
             // let moveSlider = slider.animate([
