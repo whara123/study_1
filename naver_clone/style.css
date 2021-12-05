@@ -378,7 +378,7 @@ footer{
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
 
     /* 상단 */
     header{
@@ -464,12 +464,22 @@ footer{
         
     }
 
-    .item-slide:nth-child(2){
-        transform: translateX(375px);
-    }
-    .item-slide:nth-child(3){
-        transform: translateX(750px);
-    }
+    
+.item-slide:nth-child(1){
+    transform: translateX(0);
+}
+.item-slide:nth-child(2){
+    transform: translateX(375px);
+}
+.item-slide:nth-child(3){
+    transform: translateX(750px);
+}
+.item-slide:nth-child(4){
+    transform: translateX(1125px);
+}
+.item-slide:nth-child(5){
+    transform: translateX(1500px);
+}
     .item-slide img{
         width:100%;
         height: 100%;
