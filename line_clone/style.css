@@ -1,0 +1,62 @@
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    position: relative;
+}
+
+.sr-only{
+    position: absolute;
+    clip: (0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+h1 a{
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+header{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    z-index: 10;
+    margin: 22px 0 0 18px;
+}
+
+.section-first{
+    width: 100%;
+    height: 812px;
+}
+
+.box-video{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 812px;
+    background-color:darkgray;
+}
+
+.text-area{
+    position: absolute;
+    margin: 0 32px;
+    top: 50%;
+    transform: translateY(-80%);
+}
+
+.text-area p{
+    color: #fff;
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: bold;
+    margin-bottom: 42px;
+}
+
+.wrap-select{
+    display: flex;
+    flex-direction: column;
+    
+}
