@@ -44,7 +44,7 @@ header{
     position: absolute;
     margin: 0 32px;
     top: 50%;
-    transform: translateY(-80%);
+    transform: translateY(-50%);
 }
 
 .text-area p{
@@ -58,5 +58,36 @@ header{
 .wrap-select{
     display: flex;
     flex-direction: column;
+    width: 80%;
+}
+
+.dropbox{
+    appearance: none;
+    background: none;
+    color:#fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding:0 26px 12px 0;
+    border: none;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.dropbox option{
+    color: #000;
     
+}
+
+.ui-down::after{
+    content:'';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border:2px solid #fff;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    right: 65px;
 }
