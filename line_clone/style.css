@@ -63,12 +63,13 @@ header{
 
 .dropbox{
     appearance: none;
+    
     background: none;
+    border: none;
     color:#fff;
     font-size: 18px;
     font-weight: bold;
     padding:0 26px 12px 0;
-    border: none;
     border-bottom: 2px solid #fff;
     margin-bottom: 20px;
     width: 100%;
@@ -80,6 +81,8 @@ header{
     
 }
 
+
+
 .ui-down::after{
     content:'';
     position: absolute;
@@ -90,4 +93,20 @@ header{
     border-left: none;
     transform: rotate(45deg);
     right: 65px;
+}
+
+.btn-search, .btn-menu{
+    background: none;
+    border: none;
+}
+
+.bi-search, .bi-list{
+    font-size: 20px;
+    color:#fff;
+}
+
+.bi-arrow-right-short{
+    font-size: 60px;
+    
+    color: #fff;
 }
