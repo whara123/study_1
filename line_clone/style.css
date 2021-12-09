@@ -33,11 +33,12 @@ header{
 }
 
 .box-video{
-    position: absolute;
+    position: relative;
     top:0;
     width: 100%;
     height: 812px;
     background-color:darkgray;
+    overflow: hidden;
 }
 
 .text-area{
@@ -77,11 +78,18 @@ header{
 
 
 .dropbox option{
-    color: #000;
-    
+    color: #000;   
 }
 
+.dropbox:focus{
+    outline:none;
+}
 
+video{
+    position: absolute;
+    
+    height: 100%;
+}
 
 .ui-down::after{
     content:'';
