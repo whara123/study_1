@@ -30,6 +30,7 @@ header{
 .section-first{
     width: 100%;
     height: 812px;
+    margin-bottom: 72px;
 }
 
 .box-video{
@@ -44,8 +45,8 @@ header{
 .text-area{
     position: absolute;
     margin: 0 32px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 11%;
+    
 }
 
 .text-area p{
@@ -117,4 +118,172 @@ video{
     font-size: 60px;
     
     color: #fff;
+}
+
+main section:nth-child(n+2){
+    padding: 0 20px;
+}
+
+/* 문화 섹션 */
+
+.section-second_culture h2{
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.section-second_culture article{
+    margin-bottom: 40px;
+}
+
+.section-second_culture article a img{
+    width: 335px;
+    height: 160px;
+    margin-bottom: 16px;
+}
+
+.section-second_culture article a em{
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.section-second_culture article a p{
+    font-size: 15px;
+    line-height: 20px;
+    color:#616161;
+    margin-top: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.wrap-bottom_link{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.link-about_content{
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.link-about_content::after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+    transform: rotate(315deg);
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+
+/* 세번째 섹션 */
+
+.title-wrap{
+    width: 375px;
+    height: 267px;
+    background-image: url(./src/notebook.jpg);
+    background-size: 375px 267px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: -20px;
+    
+}
+
+
+/* 이거 섹션에 넣어서 하면 된다구 함 */
+
+.section-third_global_employee{
+    margin-top: 62px;
+    background-color: #f7f8f9;
+}
+
+.title-wrap h2{
+    position: absolute;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    margin-left: 20px;
+}
+
+
+.list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: relative;
+    top: -60px;
+}
+
+.list-item{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border:1px solid #ebebeb;
+}
+.link-employ{
+    padding:28px 28px;
+    display: flex;
+    flex-direction: column;
+}
+.link-employ .position{
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+
+.link-employ .name{
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+.link-employ .part{
+    font-size: 16px;
+    margin-bottom: 29px;
+}
+.link-employ .text{
+    font-size: 15px;
+    line-height: 20px;
+    color: #616161;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
+
+.employ_section{
+    padding-bottom: 62px;
+}
+
+footer{
+    padding:0 16px;
+    background-color: #f7f8f9;
+    border-top: 1px solid #ebebeb;
+}
+
+.list-sns{
+    display: flex;
+}
+
+.list-about{
+    display: flex;
+}
+
+.privacy_policy{
+    display: block;
 }
