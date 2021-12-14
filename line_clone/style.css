@@ -165,12 +165,12 @@ main section:nth-child(n+2){
     
 }
 
-.link-about_content{
+.link-about_content, .link-about_employ{
     font-weight: bold;
     margin-right: 30px;
 }
 
-.link-about_content::after{
+.link-about_content::after, .link-about_employ::after{
     content: '';
     position: absolute;
     width: 8px;
@@ -238,6 +238,7 @@ main section:nth-child(n+2){
 }
 .link-employ .position{
     font-size: 36px;
+    font-weight: bold;
     margin-bottom: 70px;
 }
 
@@ -271,19 +272,68 @@ main section:nth-child(n+2){
 }
 
 footer{
-    padding:0 16px;
+    padding:0 16px 40px;
     background-color: #f7f8f9;
     border-top: 1px solid #ebebeb;
 }
 
 .list-sns{
     display: flex;
+    margin: 20px 0;
+    gap: 24px;
 }
+
+.btn-sns{
+    width: 30px;
+    height: 30px;
+    background-image: url(./src/다운로드.png);
+    background-repeat: no-repeat;
+    background-color: inherit;
+    background-size: 124px 118px;
+    border: none;
+}
+
+.btn-sns.insta{
+    background-position: -94px -32px;
+}
+.btn-sns.facebook{
+    background-position:  -32px -62px;
+}
+.btn-sns.linkedin{
+    background-position:  0 -62px;
+}
+.btn-sns.youtube{
+    background-position: -94px 0;
+}
+
 
 .list-about{
     display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    font-size: 15px;
 }
 
 .privacy_policy{
     display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+small{
+    font-size: 13px;
+    
+}
+
+.list-about li::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin-top: 3px;
+    margin-left: 5px;
+    border: 2px solid black;
+    border-top: none ;
+    border-left: none;
+    transform: rotate(45deg);
 }
