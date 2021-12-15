@@ -1,6 +1,7 @@
 body{
     font-family: 'Noto Sans KR', sans-serif;
     position: relative;
+    max-width: 375px;
 }
 
 .sr-only{
@@ -22,10 +23,63 @@ header{
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     z-index: 10;
-    margin: 22px 0 0 18px;
+    padding: 22px 10px 22px 22px;
+    box-sizing: border-box;
+    transition: 0.4s;
 }
+
+.fixed{
+    position: fixed;
+}
+.fixed.scroll{
+    background: rgba(255, 255, 255, 0.8);
+}
+.fixed.scroll h1 a, .fixed.scroll .warp-btn .headbtn{
+    color:#000;
+}
+
+input{
+    display: none;
+    width: 270px;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.btn-search_close{
+    display: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+.fixed.search_on{
+    background: rgba(255, 255, 255, 0.8);
+}
+.fixed.search_on h1 a{
+    display: none;
+} 
+
+.fixed.search_on .warp-btn{
+    display: flex;
+}
+.fixed.search_on .warp-btn .headbtn{
+    color:#000;
+}
+
+
+.fixed.search_on input, .fixed.search_on .btn-search_close{
+    display: block;
+
+}
+
+.fixed.search_on .btn-menu{
+    display: none;
+}
+
 
 .section-first{
     width: 100%;
@@ -45,7 +99,7 @@ header{
 .text-area{
     position: absolute;
     margin: 0 32px;
-    top: 11%;
+    top: 6%;
     
 }
 
@@ -104,12 +158,12 @@ video{
     right: 65px;
 }
 
-.btn-search, .btn-menu{
+.btn-search, .btn-menu, .btn-search_close{
     background: none;
     border: none;
 }
 
-.bi-search, .bi-list{
+.bi-search, .bi-list,.bi-x{
     font-size: 20px;
     color:#fff;
 }
@@ -325,7 +379,13 @@ small{
     
 }
 
-.list-about li::after{
+.list-about li button{
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.list-about li button::after{
     content: '';
     position: absolute;
     width: 5px;
@@ -336,4 +396,28 @@ small{
     border-top: none ;
     border-left: none;
     transform: rotate(45deg);
+}
+.list-btn_item{
+    position: relative;
+}
+
+.list-item_menu{
+    display: none;
+    border: 1px solid #ebebeb;
+    width: 150px;
+    max-height: 176px;
+    padding:11px 0;
+    background-color: #fff;
+    position: absolute;
+    bottom:38px;
+    overflow: scroll;
+}
+
+.list-item_menu li{
+    padding:7px 3px 7px 15px;
+    font-size: 14px;
+}
+
+.list-btn_item.on .list-item_menu{
+    display: block;
 }
